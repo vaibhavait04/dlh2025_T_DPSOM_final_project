@@ -4,6 +4,15 @@
 ## Reference
 > Laura Manduchi, Matthias Hüser, Martin Faltys, Julia Vogt, Gunnar Rätsch,and Vincent Fortuin. 2021. T-DPSOM - An Interpretable Clustering Methodfor Unsupervised Learning of Patient Health States. InACM Conference onHealth, Inference, and Learning (ACM CHIL ’21), April 8–10, 2021, VirtualEvent, USA.ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3450439.3451872
 
+
+## Create conda environment 
+
+Create conda environment using requirements file. 
+```
+conda create --name dlh2025 --file requirements.txt
+conda activate dlh2025
+```
+
 ## Training and Evaluation steps done: 
 
 ### Deep Probabilistic SOM
