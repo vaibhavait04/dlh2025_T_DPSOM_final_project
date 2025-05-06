@@ -55,5 +55,16 @@ Insert the paths of the obtained preprocessed data into the script `eicu_preproc
 The script selects the last 72 time-step of each time-series and the following labels: `'full_score_1', 'full_score_6', 'full_score_12', 'full_score_24', 'hospital_discharge_expired_1', 'hospital_discharge_expired_6', 'hospital_discharge_expired_12', 'hospital_discharge_expired_24', 'unit_discharge_expired_1', 'unit_discharge_expired_6', 'unit_discharge_expired_12', 'unit_discharge_expired_24'`
 It then saves the dataset in a csv table in `data/eICU_data.csv`.
 
+## Abelations 
+
+
+### SOM 
+Use following steps for SOM 
+* `python assignment_steps/sample_code_som.py`
+
+### DPSOM
+Use following steps to run/ train the model 
+* `python assignment_steps/assignment_dpsom_model_train.py`
+
 
 Note: python conda environment needs to include these basic packages and can have conflict during installation - these might require additional steps, but overall LLM are helpful provide great suggestions on next steps. Packages: `tensorflow tensorflow_probability keras tf-keras torch scikit-learn hd5py pandas matplotlib seaborn jupyter `
