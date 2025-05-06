@@ -61,7 +61,7 @@ def ex_config():
         more_runs (bool): Indicator whether to run the job once (False) or multiple times (True) outputting mean and
                           variance.
     """
-    num_epochs = 300
+    num_epochs = 5
     batch_size = 300
     latent_dim = 100
     som_dim = [8, 8]
@@ -73,7 +73,7 @@ def ex_config():
     theta = 1
     epochs_pretrain = 15
     decay_factor = 0.99
-    decay_steps = 5000
+    decay_steps = 5
     name = ex.get_experiment_info()["name"]
     ex_name = "{}_{}_{}-{}_{}_{}".format(name, latent_dim, som_dim[0], som_dim[1], str(date.today()),
                                          uuid.uuid4().hex[:5])
@@ -530,7 +530,7 @@ def main(latent_dim, som_dim, learning_rate, decay_factor, alpha, beta, gamma, t
         NMI = []
         PUR = []
         for i in range(10):
-            results = train_model(model, data_train, data_val, data_generator, lr_val)
+            results = train_model(model, data_train[1:1000], data_val, data_generator, lr_val)
             NMI.append(results["NMI"])
             PUR.append(results["Purity"])
         NMI_mean = np.mean(NMI)
@@ -552,7 +552,7 @@ def main(latent_dim, som_dim, learning_rate, decay_factor, alpha, beta, gamma, t
                 % (NMI_mean, NMI_sd, PUR_mean, PUR_sd, ex_name))
         f.close()
     else:
-        results = train_model(model, data_train, data_val, data_generator, lr_val)
+        results = train_model(model, data_train[1:1000], data_val, data_generator, lr_val)
         print("\n NMI: {}, AMI: {}, PUR: {}.  Name: %r.\n".format(results["NMI"], results["AMI"], results["Purity"],
                                                                   ex_name))
 
