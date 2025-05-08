@@ -67,4 +67,9 @@ Use following steps to run/ train the model
 * `python assignment_steps/assignment_dpsom_model_train.py`
 
 
+## Final links 
+
+* PDF https://github.com/vaibhavait04/dlh2025_T_DPSOM_final_project/blob/main/assignment_steps/FinalPaperPDF_Format_FromLatex.pdf
+* Powerpoint: https://github.com/vaibhavait04/dlh2025_T_DPSOM_final_project/blob/main/assignment_steps/T-DPSOM_Presentation.pptx
+
 Note: python conda environment needs to include these basic packages and can have conflict during installation - these might require additional steps, but overall LLM are helpful provide great suggestions on next steps. Packages: `tensorflow tensorflow_probability keras tf-keras torch scikit-learn hd5py pandas matplotlib seaborn jupyter `
